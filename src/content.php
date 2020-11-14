@@ -14,11 +14,11 @@
     <p class="menu"> <span con="-1">-ZURÜCK-</span> | <span con="-1">-WEITER-</span> </p>
   </section>
 
-  <section class="content_section">
+  <section class="invi content_section">
     <h1>Cryptographie</h1>
   </section>
 
-  <section class="content_section">
+  <section class="invi content_section">
     <h1>Cryptographie</h1>
   </section>
 </div>
