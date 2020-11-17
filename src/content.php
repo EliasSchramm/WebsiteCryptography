@@ -15,8 +15,18 @@
   </section>
 
   <section class="content_section">
-    <h1>Seite 1</h1>
+    <h1>Über das Folgende</h1>
+    <h2 class="animated" animated="VERSTEHEN;UND;AUSPROBIEREN" sec="120" index="0" subindex="0" hold="500" reverse="50">ss</h2>
+    <hr>
+
+    <p>
+      Im Folgenden werde ich das Thema der Cryptographie aufzeigen. Allerdings habe ich nicht vor in hochtrabende Technologien abzuschweifen.
+      Sondern möchte ich auf den weiterführenden Seiten die einfachsten Prinzipien vorstellen. Und zwar so dass es einfach verständlich auch
+      für Laien ist. So wird es auch immer Beispiele zum ausprobieren geben.
+    </p>
+
     <p class="menu"> <span onclick="switchPage(-1)">-ZURÜCK-</span> | <span onclick="switchPage(+1)">-WEITER-</span> </p>
+
   </section>
 
   <section class="content_section">

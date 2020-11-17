@@ -16,8 +16,8 @@ section{
 }
 
 section{
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 15%;
+  padding-right: 15%;
   min-height: 100vh !important;
 }
 
@@ -29,6 +29,13 @@ section h1{
 section h2{
   text-align: center;
   font-size: 3em;
+}
+
+section p{
+  text-align: left;
+  font-size: 2em;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 section p.comment{
