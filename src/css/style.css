@@ -5,6 +5,7 @@ section {
 
 .invi {
   display: none;
+  visibility: hidden;
 }
 
 * {
@@ -95,6 +96,8 @@ body {
 
 svg {
   position: absolute;
+  overflow: hidden;
+  height: 100vh;
 }
 
 #stop1 {
@@ -102,7 +105,7 @@ svg {
 }
 
 #stop2 {
-  stop-color: #101010;
+  stop-color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

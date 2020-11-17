@@ -11,14 +11,33 @@
        Informationssystemen, die widerstandsfähig gegen Manipulation
        und unbefugtes Lesen sind" <br>- <br>Wikipedia
     </p>
-    <p class="menu"> <span con="-1">-ZURÜCK-</span> | <span con="-1">-WEITER-</span> </p>
+    <p class="menu"> <span onclick="switchPage(-1)">-ZURÜCK-</span> | <span onclick="switchPage(+1)">-WEITER-</span> </p>
   </section>
 
-  <section class="invi content_section">
-    <h1>Cryptographie</h1>
+  <section class="content_section">
+    <h1>Seite 1</h1>
+    <p class="menu"> <span onclick="switchPage(-1)">-ZURÜCK-</span> | <span onclick="switchPage(+1)">-WEITER-</span> </p>
   </section>
 
-  <section class="invi content_section">
-    <h1>Cryptographie</h1>
+  <section class="content_section">
+    <h1>Seite 2</h1>
+    <p class="menu"> <span onclick="switchPage(-1)">-ZURÜCK-</span> | <span onclick="switchPage(+1)">-WEITER-</span> </p>
   </section>
+
+  <section class="content_section">
+    <h1>Seite 3</h1>
+    <p class="menu"> <span onclick="switchPage(-1)">-ZURÜCK-</span> | <span onclick="switchPage(+1)">-WEITER-</span> </p>
+  </section>
+
+  <section class="content_section">
+    <h1>Seite 4</h1>
+    <p class="menu"> <span onclick="switchPage(-1)">-ZURÜCK-</span> | <span onclick="switchPage(+1)">-WEITER-</span> </p>
+  </section>
+
+  <section class="content_section">
+    <h1>Seite 5</h1>
+    <p class="menu"> <span onclick="switchPage(-1)">-ZURÜCK-</span> | <span onclick="switchPage(+1)">-WEITER-</span> </p>
+  </section>
+
+
 </div>
