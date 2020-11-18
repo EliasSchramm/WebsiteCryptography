@@ -4,6 +4,16 @@ section{
   min-height: 100% !important;
 }
 
+form{
+  align-items: center;
+  text-align: center;
+}
+
+input, button{
+  background: black;
+
+}
+
 .invi{
   display: none;
   visibility:hidden;
