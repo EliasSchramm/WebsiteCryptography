@@ -9,8 +9,9 @@ form{
   text-align: center;
 }
 
-input, button{
+input, button, textarea{
   background: black;
+  resize: none;
 
 }
 
@@ -46,11 +47,13 @@ section p{
   font-size: 2em;
   margin-top: 5%;
   margin-bottom: 5%;
+  word-wrap: break-word;
 }
 
 section p.comment{
   text-align: center;
   font-size: 2em;
+
 }
 section p.menu{
   margin-top: 3%;

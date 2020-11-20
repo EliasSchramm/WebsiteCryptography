@@ -47,7 +47,7 @@
     <hr>
     <form id="form1_bsp1" action="" method="post" >
       <label for="f1_t1">Text: </label>
-      <input type="text" name="f1_t1" id="f1_t1" value="Text">
+      <textarea cols="40" rows="4" type="text" name="f1_t1" id="f1_t1" value="Text"></textarea>
 
       <label for="f1_t2">Key: </label>
       <input type="number" name="f1_i1" id="f1_i1" value="1">
@@ -59,12 +59,12 @@
 
     <form id="form2_bsp1" action="#" method="post">
       <label for="f2_t1">Text: </label>
-      <input type="text" name="f2_t1" value="Text">
+      <textarea cols="40" rows="4" id="f2_t1" name="f2_t1" value="Text"> </textarea>
 
       <label for="f2_t2">Key: </label>
-      <input type="number" name="f2_i1" value="1">
+      <input type="number" id="f2_i1" name="f2_i1" value="1">
 
-      <input type="button" name="" value="ENTSCHLÜSSELN">
+      <button type="submit">ENTSCHLÜSSELN"</button>
     </form>
 
     <p>Output:  <span id = "out2"></span> </p>

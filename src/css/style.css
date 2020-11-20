@@ -8,8 +8,9 @@ form {
   text-align: center;
 }
 
-input, button {
+input, button, textarea {
   background: black;
+  resize: none;
 }
 
 .invi {
@@ -44,6 +45,7 @@ section p {
   font-size: 2em;
   margin-top: 5%;
   margin-bottom: 5%;
+  word-wrap: break-word;
 }
 
 section p.comment {
