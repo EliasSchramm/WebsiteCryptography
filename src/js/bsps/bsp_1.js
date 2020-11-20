@@ -11,14 +11,12 @@ var ASCII = []
 for (var i = 32; i <= 127; i++) ASCII.push(String.fromCharCode(i));
 ASCII.pop()
 
-console.log(ASCII.join(''));
-
 function decode_simple_1(original, key){
   var str = "";
   let org_array = original.split('')
   let block = false;
   key = parseInt(key)
-  key = clamp(key, -ASCII.length, ASCII.length)
+
   org_array.forEach((item, i) => {
     var char = item;
     var index
@@ -26,21 +24,20 @@ function decode_simple_1(original, key){
     ASCII.forEach((jtem, j) => {
       if(char == jtem && !block){
         index = j - key;
-        if(index >= ASCII.length){
-          index = index - ASCII.length
-        }else
-        if(index < 0){
-          index = ASCII.length + index;
+        while(!between(index, 0, ASCII.length-1)){
+          if(index >= ASCII.length){
+            index = index - ASCII.length
+          }else if(index < 0){
+            index = ASCII.length + index;
+          }
         }
         char = ASCII[index]
         block = true;
-
       }
     });
 
     str += char;
   });
-
   return convert(str);
 }
 
@@ -49,7 +46,6 @@ function encode_simple_1(original, key) {
   let org_array = original.split('')
   let block = false;
   key = parseInt(key)
-  key = clamp(key, -ASCII.length, ASCII.length)
 
   org_array.forEach((item, i) => {
     var char = item;
@@ -58,17 +54,15 @@ function encode_simple_1(original, key) {
     ASCII.forEach((jtem, j) => {
       if(char == jtem && !block){
         index = j + key;
-        if(index >= ASCII.length){
-          index = index - ASCII.length
-        }else if(index < 0){
-          index = ASCII.length + index;
+        while(!between(index, 0, ASCII.length-1)){
+          if(index >= ASCII.length){
+            index = index - ASCII.length
+          }else if(index < 0){
+            index = ASCII.length + index;
+          }
         }
-        console.log(char);
         char = ASCII[index]
         block = true;
-        console.log(char);
-        console.log(index);
-
       }
     });
 
@@ -87,4 +81,6 @@ form2_bsp1.onsubmit = function() {
   out2.innerHTML = decode_simple_1(f2_t1.value, f2_i1.value);
   return false;
 }
+
+console.log(ASCII.join(''));
 console.log(ASCII);
