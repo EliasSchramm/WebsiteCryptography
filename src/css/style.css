@@ -126,4 +126,12 @@ svg {
   stop-color: #fff;
 }
 
+table, tr, td {
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  border-collapse: collapse;
+  border: 1px solid white;
+}
+
 /*# sourceMappingURL=style.css.map */
