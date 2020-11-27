@@ -75,6 +75,10 @@
               echo "<td>$col_value</td>";
           }
 
+          echo '<td> <form class="" action="admin.php?mode=edit_page&id='.$id.'" method="post">
+            <button type="submit" name="button">EDIT</button>
+          </form> </td>';
+
           echo '<td> <form class="" action="admin.php?mode=delete_page&id='.$id.'" method="post">
             <button type="submit" name="button">DELETE</button>
           </form> </td>';
@@ -90,23 +94,55 @@
 
       <?php
       echo "</section>";
+
     }elseif ($coockie_exists && $mode == "create_page") {
-            $query = "INSERT INTO content (ID, HEADLINE, FUN_LINE, CONTENT) VALUES (NULL, 'Lorem Ipsum', 'Lorem;Ipsum', 'Lorem Ipsum') ";
-            $result = mysqli_query($sql_link, $query) or die("Anfrage fehlgeschlagen: " . mysql_error());
-            header("Location: admin.php");
-            die();
+      $query = "INSERT INTO content (ID, HEADLINE, FUN_LINE, CONTENT) VALUES (NULL, 'HEADLINE', 'FUN_LINE', 'CONTENT') ";
+      $result = mysqli_query($sql_link, $query) or die("Anfrage fehlgeschlagen: " . mysql_error());
+      header("Location: admin.php");
+      die();
     }elseif ($coockie_exists && $mode == "delete_page") {
       $query = "DELETE FROM content WHERE content.ID =".$_GET["id"];
       $result = mysqli_query($sql_link, $query) or die("Anfrage fehlgeschlagen: " . mysql_error());
       header("Location: admin.php");
       die();
+    }elseif ($coockie_exists && $mode == "edit_page") {
+      $query = "SELECT * FROM content WHERE content.ID =".$_GET['id'];
+      $result = mysqli_query($sql_link, $query) or die("Anfrage fehlgeschlagen: " . mysqli_error());
+
+      $line = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+      $id = $line["ID"];
+      $headline = $line["HEADLINE"];
+      $fun_line = $line["FUN_LINE"];
+      $content =  $line["CONTENT"];
+
+      echo '<form class="" action="admin.php?mode=save_page&id='.$id.'" method="post">
+        <textarea cols="50" rows="1" name="HEADLINE">'.$headline.'</textarea><br>
+        <textarea cols="50" rows="1" name="FUN_LINE">'.$fun_line.'</textarea><br>
+        <textarea cols="100" rows="30" name="CONTENT_C">'.$content.'</textarea>
+        <button type="submit" name="button">SAVE</button>
+      </form>';
+    }elseif ($coockie_exists && $mode == "save_page") {
+      $id = $_GET["id"];
+      $headline = $_POST["HEADLINE"];
+      $fun_line = $_POST["FUN_LINE"];
+      $content =  htmlentities($_POST["CONTENT_C"]);
+
+      $query = 'UPDATE content SET HEADLINE = "'.$headline.'", FUN_LINE = "'.$fun_line.'", CONTENT = "'.$content.'" WHERE content.ID ='.$id ;
+      $result = mysqli_query($sql_link, $query) or die("Anfrage fehlgeschlagen: " . mysqli_error($sql_link));
+
+      header("Location: admin.php?mode=edit_page&id=".$id);
+      die();
+
+
+
+
     }
-
-
 
 
       ?>
 
+    <a href="admin.php">ZURÜCK</a>
 
 
 
