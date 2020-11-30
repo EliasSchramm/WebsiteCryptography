@@ -133,21 +133,9 @@
 
       header("Location: admin.php?mode=edit_page&id=".$id);
       die();
-
-
-
-
     }
-
-
       ?>
 
     <a href="admin.php">ZURÜCK</a>
-
-
-
   </body>
 </html>
-<?php
-
-?>

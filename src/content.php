@@ -12,9 +12,6 @@
    $query = "SELECT * FROM content";
    $result = mysqli_query($sql_link, $query) or die("Anfrage fehlgeschlagen: " . mysql_error());
 
-
-
-
    while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
      $content = html_entity_decode($line['CONTENT']);
          echo '<section class="content_section">
@@ -27,9 +24,4 @@
    }
 
    ?>
-
-
-
-
-
 </div>

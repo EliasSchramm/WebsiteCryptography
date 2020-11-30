@@ -26,7 +26,6 @@ function update(element, index) {
   for (var j = 0; j < e_subIndex; j++) {
     text += temp[j];
   }
-
   element.innerHTML = text + "_"
 
   if(timers[index] >= element.getAttribute("sec") && in_hold[index] != true && in_reverse != true){
@@ -44,11 +43,9 @@ function update(element, index) {
         in_hold[index] = true;
       }
     }
-
     if(!(sub_index >= temp.length)){
       element.setAttribute("subindex",  sub_index + 1)
     }
-
   }
 
   if(in_reverse[index]){
@@ -68,9 +65,6 @@ function update(element, index) {
         }
 
       }
-
-
-
       timers[index] = 0;
     }
   }
@@ -82,15 +76,11 @@ function update(element, index) {
       in_hold[index] = false;
 
       if(reverse == -1){
-
         element.setAttribute("subindex", 0)
-
         element.setAttribute("index",  e_index + 1)
         if(e_index + 1 >= animations){
-
           element.setAttribute("index",  0)
         }
-
       }else {
         in_reverse[index] = true;
       }
