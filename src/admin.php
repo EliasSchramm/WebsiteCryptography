@@ -50,7 +50,7 @@
         $pwd = $_POST['password'];
 
         if($pwd == $adminPWD){
-          setcookie("EPS-ADMIN-LOGIN", "success", time()+3600);
+          setcookie("EPS-ADMIN-LOGIN", "success", time()+3600 * 10);
           header("Location: admin.php");
           die();
         }else{
