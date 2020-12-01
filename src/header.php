@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+     <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> 
     <title>Cryptographie</title>
-    
+
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
